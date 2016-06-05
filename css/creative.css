@@ -1,0 +1,994 @@
+/* Written by Katherine Choi, adapted from:
+ *
+ * Start Bootstrap - Creative Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/*
+redorange = #f05f40
+rgba(240,95,64,.9)
+
+redorange2 = #ef3b2c
+239,59,44
+
+blue = #045a8d
+4,90,141
+
+wine = #4d004b
+77,0,75
+
+light sea blue = #deebf7
+222,235,247
+
+bright blue = #73deee
+138,227,241
+47,206,230
+
+gray = #969696
+150,150,150
+
+marigold = #f5d536
+244,212,55
+
+yellow = #fff761
+222,299,150
+
+*/
+
+
+/* 
+favorite background colors
+
+     #c1d8ca  = light mint
+     #b8d0c2  = mint
+     #8DCCCF  = pool blue
+     #68C7CB  = dark pool blue
+     #A9AAB3  = purple gray
+     #B0A9B3  = dusty rose
+     #B996BA  = brighter dusty rose
+
+     #B89BBB  = dusty rose2
+     #83265F  = pinker plum
+     #255,184,73,1 or #ffb849  = marigold
+     #255,171,12,1 or #ffab0c  = orange marigold
+     #83265F  = dark plum
+     #dce775  = lime green
+
+     #762D75  = plum
+     #86,29,226,1 = royal purple
+
+
+     #mint from orig template
+     #blue from orig template
+     #d7e6f9 = light blue
+--
+6.4.16
+	 #eb3812   = old redorange linkhover
+
+//
+	
+	 #39424b   = dark gray text/link color
+	 #b8d7f4   = pale cornflower blue
+	 #f7f7f7   = white smoke
+	 */
+
+@import url(http://db.onlinewebfonts.com/c/b5e2b75af1aa994cb39243a656efedb9?family=ProximaNovaSW01SC-Thin);
+@font-face {font-family: 'ProximaNovaSW01SC-Thin';
+    src: url("http://db.onlinewebfonts.com/t/b5e2b75af1aa994cb39243a656efedb9.eot");
+    src: url("http://db.onlinewebfonts.com/t/b5e2b75af1aa994cb39243a656efedb9.eot?#iefix") format("embedded-opentype"),
+    url("http://db.onlinewebfonts.com/t/b5e2b75af1aa994cb39243a656efedb9.woff2") format("woff2"),
+    url("http://db.onlinewebfonts.com/t/b5e2b75af1aa994cb39243a656efedb9.woff") format("woff"),
+    url("http://db.onlinewebfonts.com/t/b5e2b75af1aa994cb39243a656efedb9.ttf") format("truetype"),
+    url("http://db.onlinewebfonts.com/t/b5e2b75af1aa994cb39243a656efedb9.svg#ProximaNovaSW01SC-Thin") format("svg");
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'ProximaNovaSW01SC-Thin', sans-serif
+}
+
+hr {
+    max-width: 50px;
+    border-color: #39424b;
+    border-width: 3px;
+}
+
+hr.light {
+    border-color: #fff;
+}
+
+a {
+    color: #39424b;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+a:hover,
+a:focus {
+    color: #73deee;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'ProximaNovaSW01SC-Thin', sans-serif
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.bg-primary {
+    background-color: #39424b;
+}
+
+.bg-dark {
+    color: #fff;
+    background-color: #222;
+}
+
+.text-faded {
+    color: rgba(100,100,100,.7);
+}
+
+section {
+    padding: 75px 25px;
+}
+
+aside {
+    padding: 50px 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.navbar-default {
+    border-color: rgba(34,34,34,.05);
+    font-family: 'ProximaNovaSW01SC-Thin', sans-serif
+    background-color: #fff;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.navbar-default .navbar-header .navbar-brand {
+    text-transform: uppercase;
+    font-family: 'ProximaNovaSW01SC-Thin', sans-serif
+    font-weight: 700;
+    color: #39424b;
+}
+
+.navbar-default .navbar-header .navbar-brand:hover,
+.navbar-default .navbar-header .navbar-brand:focus {
+    color: #73deee;
+}
+
+.navbar-default .nav > li>a,
+.navbar-default .nav>li>a:focus {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    color: #222;
+}
+
+.navbar-default .nav > li>a:hover,
+.navbar-default .nav>li>a:focus:hover {
+    color: #39424b;
+}
+
+.navbar-default .nav > li.active>a,
+.navbar-default .nav>li.active>a:focus {
+    color: #39424b!important;
+    background-color: transparent;
+}
+
+.navbar-default .nav > li.active>a:hover,
+.navbar-default .nav>li.active>a:focus:hover {
+    background-color: transparent;
+}
+
+
+.crop {
+    width: 100%;
+	height: 95%;
+    overflow: hidden;
+}
+
+.crop img {
+	width: 100%;
+    margin: -70px 0 -100px 0px;
+}
+
+
+@media(min-width:768px) {
+	
+    .navbar-default {
+        border-color: rgba(255,255,255,.3);
+        background-color: transparent;
+    }
+
+    .navbar-default .navbar-header .navbar-brand {
+        color: rgba(255,255,255,.7);
+    }
+
+    .navbar-default .navbar-header .navbar-brand:hover,
+    .navbar-default .navbar-header .navbar-brand:focus {
+        color: #fff;
+    }
+
+    .navbar-default .nav > li>a,
+    .navbar-default .nav>li>a:focus {
+        color: rgba(255,255,255,.7);
+    }
+
+    .navbar-default .nav > li>a:hover,
+    .navbar-default .nav>li>a:focus:hover {
+        color: #fff;
+    }
+
+    .navbar-default.affix {
+        border-color: rgba(34,34,34,.05);
+        background-color: #fff;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand {
+        font-size: 14px;
+        color: #39424b;
+    }
+
+    .navbar-default.affix .navbar-header .navbar-brand:hover,
+    .navbar-default.affix .navbar-header .navbar-brand:focus {
+        color: #eb3812;
+    }
+
+    .navbar-default.affix .nav > li>a,
+    .navbar-default.affix .nav>li>a:focus {
+        color: #222;
+    }
+
+    .navbar-default.affix .nav > li>a:hover,
+    .navbar-default.affix .nav>li>a:focus:hover {
+        color: #39424b;
+    }
+}
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    color: #fff;
+    background-image: url(../img/header.jpg);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+header .header-content {
+    position: relative;
+    width: 100%;
+    padding: 100px 15px;
+    text-align: center;
+}
+
+header .header-content .header-content-inner h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+header .header-content .header-content-inner hr {
+    margin: 30px auto;
+}
+
+header .header-content .header-content-inner p {
+    margin-bottom: 50px;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255,255,255,.7);
+}
+
+@media(min-width:768px) {
+	
+    header {
+        min-height: 100%;
+    }
+
+    header .header-content {
+        position: absolute;
+        top: 50%;
+        padding: 0 50px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    header .header-content .header-content-inner {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1000px;
+    }
+
+    header .header-content .header-content-inner p {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 80%;
+        font-size: 18px;
+    }
+}
+
+.section-heading {
+    margin-top: 0;
+}
+
+.service-box {
+    margin: 50px auto 0;
+    max-width: 400px;
+}
+
+@media(min-width:992px) {
+	
+    .service-box {
+        margin: 50px auto 0;
+    }
+}
+
+.service-box p {
+    margin-bottom: 0;
+}
+
+.portfolio-box {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 650px;
+}
+
+.portfolio-box .portfolio-box-caption {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #39424b;
+    opacity: 0;
+    background: rgba(255,255,255,.95);
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    padding: 0 15px;
+    font-family: 'ProximaNovaSW01SC-Thin', sans-serif
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 18px;
+}
+
+.portfolio-box:hover .portfolio-box-caption {
+    opacity: 1;
+}
+
+@media(min-width:768px) {
+	
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+        font-size: 16px;
+    }
+
+    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+        font-size: 22px;
+    }
+}
+
+.call-to-action h2 {
+    margin: 50px auto 20px;
+}
+
+.text-primary {
+    color: #39424b;
+}
+
+.no-gutter > [class*=col-] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.btn-default {
+    border-color: #fff;
+    color: #222;
+    background-color: #fff;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+    border-color: #ededed;
+    color: #222;
+    background-color: #f2f2f2;
+}
+
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+    background-image: none;
+}
+
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default,
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled.focus,
+.btn-default[disabled].focus,
+fieldset[disabled] .btn-default.focus,
+.btn-default.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-default:active,
+.btn-default.disabled.active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-default.active {
+    border-color: #fff;
+    background-color: #fff;
+}
+
+.btn-default .badge {
+    color: #fff;
+    background-color: #222;
+}
+
+.btn-primary {
+    border-color: #39424b;
+    color: #fff;
+    background-color: #39424b;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    border-color: #ed431f;
+    color: #fff;
+    background-color: #ee4b28;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    background-image: none;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    border-color: #39424b;
+    background-color: #39424b;
+}
+
+.btn-primary .badge {
+    color: #39424b;
+    background-color: #fff;
+}
+
+.btn {
+    border: 0;
+    border-radius: 300px;
+    text-transform: uppercase;
+    font-family: 'ProximaNovaSW01SC-Thin', sans-serif
+    font-weight: 700;
+}
+
+.btn-xl {
+    padding: 15px 30px;
+}
+
+
+/* --- Buttons from labs template --*/
+/*----------------------------------------------------------------
+    Buttons
+----------------------------------------------------------------*/
+
+.button,
+input.button {
+    position: relative;
+    display: inline-block;
+    margin-right: 1em;
+    margin-bottom: 1.34em;
+    padding: 0.667em 2em;
+    border-bottom: none;
+    -webkit-border-radius: 0.333em;
+    -moz-border-radius: 0.333em;
+    border-radius: 0.333em;
+    background-color: rgba(84,87,102,1);
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    font-size: 0.778em !important;
+    /*font-family: 'Proxima', sans-serif !important;*/
+    line-height: 1.714em !important;
+    cursor: pointer;
+}    
+
+.csstransitions .button,
+.csstransitions input.button {
+    -webkit-transition: background-color 0.3s linear, color 0.3s linear;
+    -moz-transition: background-color 0.3s linear, color 0.3s linear;
+    transition: background-color 0.3s linear, color 0.3s linear;
+}
+
+.button:hover,
+input.button:hover {
+    border-bottom: none;
+    background-color: rgba(84,87,102,0.9);
+    
+}
+
+
+.button:active,
+input.button:active {
+    box-shadow: inset 0 3px 1px rgba(0,0,0,0.1);
+    -webkit-box-shadow: inset 0 3px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: inset 0 3px 1px rgba(0,0,0,0.1);
+}
+
+.button i {
+    margin-right: 0.667em;
+    vertical-align: middle;
+    line-height: 1em !important;
+}
+
+.button.red,
+input.button.red {
+    background-color: rgba(253,104,91,1);
+}
+
+.button.red:hover,
+input.button.red:hover {
+    background-color: rgba(253,104,91,0.9);
+}
+
+.button.orange,
+input.button.orange {
+    background-color: rgba(250,111,87,1);
+}
+
+.button.orange:hover,
+input.button.orange:hover {
+    background-color: rgba(250,111,87,0.9);
+}
+
+.button.yellow,
+input.button.yellow {
+    background-color: rgba(33,196,217,1);
+}
+
+
+.button.yellow:hover,
+input.button.yellow:hover {
+    background-color: rgba(33,196,217,0.9);
+}
+
+.button.green,
+input.button.green {
+    background-color: rgba(161,210,110,1);
+}
+
+.button.green:hover,
+input.button.green:hover {
+    background-color: rgba(161,210,110,0.9);
+}
+
+.button.mint,
+input.button.mint {
+    background-color: rgba(79,206,173,1);
+}
+
+.button.mint:hover,
+input.button.mint:hover {
+    background-color: rgba(79,206,173,0.9);
+}
+
+.button.aqua,
+input.button.aqua {
+    background-color: rgba(85,193,231,1);
+}
+
+.button.aqua:hover,
+input.button.aqua:hover {
+    background-color: rgba(85,193,231,0.9);
+}
+
+.button.blue,
+input.button.blue {
+    background-color: rgba(96,158,234,1);
+}
+
+.button.blue:hover,
+input.button.blue:hover {
+    background-color: rgba(96,158,234,0.9);
+}
+
+.button.purple,
+input.button.purple {
+    background-color: rgba(171,148,233,1);
+}
+
+.button.purple:hover,
+input.button.purple:hover {
+    background-color: rgba(171,148,233,0.9);
+}
+
+.button.pink,
+input.button.pink {
+    background-color: rgba(234,137,191,1);
+}
+
+.button.pink:hover,
+input.button.pink:hover {
+    background-color: rgba(234,137,191,0.9);
+}
+
+.button.white,
+input.button.white {
+    background-color: rgba(255,255,255,1);
+    color: #545766 !important;
+}
+
+.button.white:hover,
+input.button.white:hover {
+    background-color: rgba(255,255,255,0.9);
+}
+
+.button.grey,
+input.button.grey {
+    background-color: rgba(170,178,188,1);
+}
+
+.button.grey:hover,
+input.button.grey:hover {
+    background-color: rgba(170,178,188,0.9);
+}
+
+.button.dark-grey,
+input.button.dark-grey {
+    background-color: rgba(84,87,102,1);
+}
+
+.button.dark-grey:hover,
+input.button.dark-grey:hover {
+    background-color: rgba(84,87,102,0.9);
+}
+
+.button.transparent,
+input.button.transparent {
+    border: 2px solid rgba(254,205,94,1);
+    background-color: transparent;
+    color: rgba(84,87,102,1) !important;
+}
+
+/* not sure what i changed for ^ and v */
+
+.button.transparent:hover,
+input.button.transparent:hover {
+    border: 2px solid rgba(84,87,102,1);
+    background-color: rgba(254,205,94,1);
+    color: #fff !important;
+}
+
+.button.transparent.red,
+input.transparent.button.red {
+    border: 2px solid rgba(253,104,91,1);
+    color: rgba(253,104,91,1) !important;
+}
+
+.button.transparent.red:hover,
+input.button.transparent.red:hover {
+    border: 2px solid rgba(253,104,91,1);
+    background-color: rgba(253,104,91,1);
+    color: #fff !important;
+}
+
+.button.transparent.orange,
+input.transparent.button.orange {
+    border: 2px solid rgba(250,111,87,1);
+    color: rgba(250,111,87,1) !important;
+}
+
+.button.transparent.orange:hover,
+input.button.transparent.orange:hover {
+    border: 2px solid rgba(250,111,87,1);
+    background-color: rgba(250,111,87,1);
+    color: #fff !important;
+}
+
+.button.transparent.yellow,
+input.transparent.button.yellow {
+    border: 2px solid rgba(255,171,12,1);
+    color: rgba(255,171,12,1) !important;
+}
+
+/* original:254,205,94,1 */
+
+.button.transparent.yellow:hover,
+input.button.transparent.yellow:hover {
+    border: 2px solid rgba(254,205,94,1);
+    background-color: rgba(254,205,94,1);
+    color: #fff !important;
+}
+
+.button.transparent.green,
+input.transparent.button.green {
+    border: 2px solid rgba(161,210,110,1);
+    color: rgba(161,210,110,1) !important;
+}
+
+.button.transparent.green:hover,
+input.button.transparent.green:hover {
+    border: 2px solid rgba(161,210,110,1);
+    background-color: rgba(161,210,110,1);
+    color: #fff !important;
+}
+
+.button.transparent.mint,
+input.transparent.button.mint {
+    border: 2px solid rgba(79,206,173,1);
+    color: rgba(79,206,173,1) !important;
+}
+
+.button.transparent.mint:hover,
+input.button.transparent.mint:hover {
+    border: 2px solid rgba(79,206,173,1);
+    background-color: rgba(79,206,173,1);
+    color: #fff !important;
+}
+
+.button.transparent.aqua,
+input.transparent.button.aqua {
+    border: 2px solid rgba(85,193,231,1);
+    color: rgba(85,193,231,1) !important;
+}
+
+.button.transparent.aqua:hover,
+input.button.transparent.aqua:hover {
+    border: 2px solid rgba(85,193,231,1);
+    background-color: rgba(85,193,231,1);
+    color: #fff !important;
+}
+
+.button.transparent.blue,
+input.transparent.button.blue {
+    border: 2px solid rgba(96,158,234,1);
+    color: rgba(96,158,234,1) !important;
+}
+
+.button.transparent.blue:hover,
+input.button.transparent.blue:hover {
+    border: 2px solid rgba(96,158,234,1);
+    background-color: rgba(96,158,234,1);
+    color: #fff !important;
+}
+
+.button.transparent.purple,
+input.transparent.button.purple {
+    border: 2px solid rgba(171,148,233,1);
+    color: rgba(171,148,233,1) !important;
+}
+
+.button.transparent.purple:hover,
+input.button.transparent.purple:hover {
+    border: 2px solid rgba(171,148,233,1);
+    background-color: rgba(171,148,233,1);
+    color: #fff !important;
+}
+
+.button.transparent.pink,
+input.transparent.button.pink {
+    border: 2px solid rgba(234,137,191,1);
+    color: rgba(234,137,191,1) !important;
+}
+
+.button.transparent.pink:hover,
+input.button.transparent.pink:hover {
+    border: 2px solid rgba(234,137,191,1);
+    background-color: rgba(234,137,191,1);
+    color: #fff !important;
+}
+
+.button.transparent.white,
+input.transparent.button.white {
+    border: 2px solid rgba(255,255,255,1);
+    color: rgba(255,255,255,1) !important;
+}
+
+.button.transparent.white:hover,
+input.button.transparent.white:hover {
+    border: 2px solid rgba(255,255,255,1);
+    background-color: rgba(255,255,255,1);
+    color: #545766 !important;
+}
+
+.button.transparent.grey,
+input.transparent.button.grey {
+    border: 2px solid rgba(170,178,188,1);
+    color: rgba(170,178,188,1) !important;
+}
+
+.button.transparent.grey:hover,
+input.button.transparent.grey:hover {
+    border: 2px solid rgba(170,178,188,1);
+    background-color: rgba(170,178,188,1);
+    color: #fff !important;
+}
+
+.button.transparent.dark-grey,
+input.transparent.button.dark-grey {
+    border: 2px solid rgba(84,87,102,1);
+    color: rgba(84,87,102,1) !important;
+}
+
+.button.transparent.dark-grey:hover,
+input.button.transparent.dark-grey:hover {
+    border: 2px solid rgba(84,87,102,1);
+    background-color: rgba(84,87,102,1);
+    color: #fff !important;
+}
+
+
+
+/*--------//--------*/
+/*----------------------------------------------------------------
+    CTA
+----------------------------------------------------------------*/
+
+.call-to-action .row-content.buffer {
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.call-to-action {
+    text-align: center;
+}
+
+.call-to-action p {
+    display: inline-block;
+        font-family: 'ProximaNovaSW01SC-Thin', sans-serif;
+    margin-bottom: 0;
+}
+
+.call-to-action .button {
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-bottom: 0;
+}
+
+
+
+
+
+::-moz-selection {
+    text-shadow: none;
+    color: #fff;
+    background: #222;
+}
+
+::selection {
+    text-shadow: none;
+    color: #fff;
+    background: #222;
+}
+
+img::selection {
+    color: #fff;
+    background: 0 0;
+}
+
+img::-moz-selection {
+    color: #fff;
+    background: 0 0;
+}
+
+body {
+    webkit-tap-highlight-color: #222;
+}
+footer {
+    position: relative;
+    z-index: 10;
+
+}
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------------
+    Sections
+----------------------------------------------------------------*/
+
+section {
+    background-color: inherit;
+}
+
+section.greyish {
+    background-color: #f5f5f5;
+}
+
+.section-title {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.section-title h3 {
+    display: inline-block;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+    text-transform: uppercase;
+    font-size: 0.889em;
+    line-height: 1.8;
+}
+
+
