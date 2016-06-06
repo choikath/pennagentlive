@@ -247,6 +247,7 @@ aside {
 	 height:261px;  /*height of popup*/
 	 padding:10px; /*padding for popup*/
 	 background-image: url("../img/homescreen.png"); 
+	 background-size: 247px 261px;
 	 /*border:1px solid #000; /*border of popup*/
 	 position:absolute; /*this will keep it relative to the body*/
 	 z-index:9999; /*this will keep it above the overlay*/
