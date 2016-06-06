@@ -212,8 +212,52 @@ aside {
     margin: -70px 0 -100px 0px;
 }
 
+#mobileonly {
+	display:inherit;
+}
+
+@media only screen and (max-device-width: 480px) {
+	#mobileonly {
+		display:inherit;
+	}
+	
+	#overlay {
+	 display:none; /*hidden on pageload*/
+	 position:fixed; /*this will disable it from scrolling*/
+	 width:100%; /*this will give the full width*/
+	 height:100%; /*this will give the full height*/
+	 z-index:999; /*this will keep it above all elements in the page*/
+	 left:0; /*this will align it to the left*/
+	 top:0; /*this will align it to the top*/
+	 background:#000; /*this will give it a black background*/
+	}
+
+	.popup {
+	 display:none; /*hidden on pageload*/
+	 width:247px; /*width of popup*/
+	 height:261px;  /*height of popup*/
+	 padding:10px; /*padding for popup*/
+	 background-image: url("../img/homescreen.png"); 
+	 /*border:1px solid #000; /*border of popup*/
+	 position:absolute; /*this will keep it relative to the body*/
+	 z-index:9999; /*this will keep it above the overlay*/
+	 top:50%; /*keep popup in center*/
+	 left:50%; /*keep popup in center*/
+	 margin-left:-100px; /*keep popup in center (it is the - total width / 2)*/
+	 margin-top:-110px; /*keep popup in center (it is the - total height / 2)*/
+	 }
+	.popup .close { /* close link*/
+	 float:right;
+	 color:#000;
+	 text-decoration:none;/*remove underline from the close link*/
+	}
+	.popup p { /*popup text*/
+	 padding:10px 0;
+	}
+}
 
 @media(min-width:768px) {
+
 	
     .navbar-default {
         border-color: rgba(255,255,255,.3);
