@@ -212,15 +212,24 @@ aside {
     margin: -70px 0 -100px 0px;
 }
 
+
 #mobileonly {
-	display:inherit;
+	display:none;
 }
 
 @media only screen and (max-device-width: 480px) {
-	#mobileonly {
-		display:inherit;
-	}
 	
+	#block_container
+	{
+	    text-align:left;
+	}
+	#bloc1, #mobileonly
+	{
+	    display:inline;
+	}
+	/*#mobileonly {
+		display:inherit;
+	}*/
 	#overlay {
 	 display:none; /*hidden on pageload*/
 	 position:fixed; /*this will disable it from scrolling*/
@@ -243,7 +252,7 @@ aside {
 	 z-index:9999; /*this will keep it above the overlay*/
 	 top:50%; /*keep popup in center*/
 	 left:50%; /*keep popup in center*/
-	 margin-left:-100px; /*keep popup in center (it is the - total width / 2)*/
+	 margin-left:-120px; /*keep popup in center (it is the - total width / 2)*/
 	 margin-top:-110px; /*keep popup in center (it is the - total height / 2)*/
 	 }
 	.popup .close { /* close link*/
